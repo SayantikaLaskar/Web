@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Responsive Webpage</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f4f8;
+        }
+
+        /* Header section */
+        header {
+            background-color: #006d77;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            display: block;
+            height: 5px;
+            background: linear-gradient(to right, #ffddd2, #006d77);
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #83c5be;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #edf6f9;
+        }
+
+        /* Main content section */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: #white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            color: #006d77;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #3d5a80;
+            line-height: 1.6;
+        }
+
+        /* Footer section */
+        footer {
+            background-color: #006d77;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Beautiful Destinations</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <main class="container">
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/photography-mountain-landscapes-with-stunning-views-sunset_883586-16683.jpg" alt="Destination 1">
+            <div class="card-content">
+                <h3>Mountain Adventure</h3>
+                <p>Experience the serene beauty of mountainous landscapes with breathtaking views.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.theconversation.com/files/149162/original/image-20161208-18046-116xg09.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C3500%2C1697&q=45&auto=format&w=1356&h=668&fit=crop" alt="Destination 2">
+            <div class="card-content">
+                <h3>City Lights</h3>
+                <p>Explore the vibrant life of modern cities, full of culture and attractions.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://afar.brightspotcdn.com/dims4/default/6b7a834/2147483647/strip/true/crop/1000x667+0+0/resize/1440x960!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F06%2Fa1%2F73403f3f4813a4a8f6d9e78c9f5d%2Fshutterstock-1938868960.jpg" alt="Destination 3">
+            <div class="card-content">
+                <h3>Tropical Beaches</h3>
+                <p>Relax on white sandy beaches under the sun and enjoy crystal-clear waters.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Explore. All rights reserved.</p>
+    </footer>
+</body>
+</html>
